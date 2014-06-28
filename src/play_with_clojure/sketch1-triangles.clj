@@ -12,6 +12,7 @@
         y3 y2]
     (q/triangle x1 y1 x2 y2 x3 y3)))
 
+
 (defn draw-box [x y size]
   (q/fill (q/random 255) (q/random 255) (q/random 255))
   (q/rect x y size size)
@@ -41,12 +42,12 @@
         margin 5
         width (q/width)
         height (q/height)
-        blocks 5
+        blocks 2
         ]
     (draw-squres margin width height blocks))
-  )
+  (q/save (apply str ["target/img/triangles_" (q/random 1000) ".png"])))
 
 (q/defsketch example
-  :title "Testing..."
+  :title "Triangles"
   :setup setup
   :size [320 320])

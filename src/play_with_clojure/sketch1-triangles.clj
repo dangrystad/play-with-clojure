@@ -42,10 +42,10 @@
         margin 5
         width (q/width)
         height (q/height)
-        blocks 2
+        blocks 3
         ]
     (draw-squres margin width height blocks))
-  (q/save (apply str ["target/img/triangles_" (q/random 1000) ".png"])))
+  (q/save (apply str ["target/img/triangles_" (rand-int 100000) ".png"])))
 
 (q/defsketch example
   :title "Triangles"
